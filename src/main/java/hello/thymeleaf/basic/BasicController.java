@@ -68,7 +68,7 @@ public class BasicController {
     }
 
     @GetMapping("/date")
-    public String date(Model model) {
+    public String date(Model model, HttpServletRequest request, HttpServletResponse response, HttpSession session) {
         model.addAttribute("localDateTime", LocalDateTime.now());
         return "basic/date";
     }
